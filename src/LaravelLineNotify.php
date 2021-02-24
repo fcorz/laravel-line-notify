@@ -11,32 +11,39 @@ declare(strict_types=1);
 namespace Fcorz\LaravelLineNotify;
 
 use Fcorz\LaravelLineNotify\Exceptions\HttpException;
-use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Client;
 
 class LaravelLineNotify
 {
     protected $http;
 
+    protected $guzzleOptions = [];
+
     protected $oauthTokenUrl = 'https://notify-bot.line.me/oauth/token';
 
     protected $notifyUrl = 'https://notify-api.line.me/api/notify';
 
-    public function __construct(HttpClient $http)
+    public function getHttpClient()
     {
-        $this->http = $http;
+        return new Client($this->guzzleOptions);
+    }
+
+    public function setGuzzleOptions(array $options)
+    {
+        $this->guzzleOptions = $options;
     }
 
     /**
      * get notify access token.
      * @param $code
-     * @throws HttpException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws HttpException
      * @return bool|mixed
      */
     public function getAccessToken($code)
     {
         try {
-            $response = $this->http->post($this->oauthTokenUrl, [
+            $response = $this->getHttpClient()->post($this->oauthTokenUrl, [
                 'form_params' => [
                     'code'          => $code,
                     'grant_type'    => 'authorization_code',
@@ -54,14 +61,14 @@ class LaravelLineNotify
 
     /**
      * send notify.
-     * @throws HttpException
      * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws HttpException
      * @return string
      */
     public function sendNotify(LaravelLineMessage $message, string $token)
     {
         try {
-            $response = $this->http->post($this->notifyUrl, $this->payload($message, $token));
+            $response = $this->getHttpClient()->post($this->notifyUrl, $this->payload($message, $token));
 
             return $response->getBody()->getContents();
         } catch (\Exception $e) {
