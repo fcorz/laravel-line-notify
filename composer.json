@@ -1,0 +1,61 @@
+{
+    "name": "fcorz/laravel-line-notify",
+    "description": "My awesome package",
+    "keywords": [
+        "fcorz",
+        "laravel-line-notify"
+    ],
+    "homepage": "https://github.com/fcorz/laravel-line-notify",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "fengchen",
+            "email": "fengchenorz@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/fcorz/laravel-line-notify/issues",
+        "source": "https://github.com/fcorz/laravel-line-notify"
+    },
+    "require": {
+        "php": "^7.0",
+        "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
+        "illuminate/notifications": "^5.3",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0|^8.0|^9.0",
+        "friendsofphp/php-cs-fixer": "^2.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fcorz\\LaravelLineNotify\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fcorz\\LaravelLineNotify\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fcorz\\LaravelLineNotify\\LaravelLineNotifyServiceProvider"
+            ],
+            "aliases": {
+                "LaravelLineNotify": "Fcorz\\LaravelLineNotify\\LaravelLineNotifyFacade"
+            }
+        }
+    }
+}
