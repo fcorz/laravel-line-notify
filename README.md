@@ -11,12 +11,17 @@ Laravel implements the line notify message notification function. Including the 
 
 ## Installation
 
-You can install the package via composer:
+you can install the package via composer:
 
-```bash
+``` bash
 composer require fcorz/laravel-line-notify
 ```
 
+publish config
+
+``` bash
+php artisan vendor:publish --provider="Fcorz\LaravelLineNotify\LaravelLineNotifyServiceProvider"
+```
 ## Usage
 
 ### simple
