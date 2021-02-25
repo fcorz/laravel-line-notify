@@ -8,7 +8,6 @@ declare(strict_types=1);
  * @document https://github.com/fcorz/laravel-line-notify/blob/master/README.md
  * @contact  fengchenorz@gmail.com
  */
-
 namespace fcorz\WechatNotification\Tests;
 
 use Fcorz\LaravelLineNotify\LaravelLineMessage;
