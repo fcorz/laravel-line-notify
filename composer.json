@@ -20,7 +20,7 @@
         "source": "https://github.com/fcorz/laravel-line-notify"
     },
     "require": {
-        "php": "^7.0",
+        "php": "^7.2",
         "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
         "illuminate/notifications": "^6.0|^7.0|^8.0",
         "guzzlehttp/guzzle": "^6.3|^7.0.1"
