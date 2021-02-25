@@ -1,9 +1,9 @@
 <h1 align="center"> laravel-line-notify </h1>
-<p align="center">:rainbow: laravel line notify notification </p>
+<p align="center">:rainbow:  laravel line notify notification </p>
 
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fcorz/laravel-line-notify.svg?style=flat-square)](https://packagist.org/packages/fcorz/laravel-line-notify)
-[![Build Status](https://img.shields.io/travis/fcorz/laravel-line-notify/master.svg?style=flat-square)](https://travis-ci.org/fcorz/laravel-line-notify)
+[![Build Status](https://travis-ci.org/fcorz/laravel-line-notify.svg?branch=main)](https://travis-ci.org/fcorz/laravel-line-notify)
 [![Total Downloads](https://img.shields.io/packagist/dt/fcorz/laravel-line-notify.svg?style=flat-square)](https://packagist.org/packages/fcorz/laravel-line-notify)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
