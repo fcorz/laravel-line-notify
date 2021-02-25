@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Fcorz\LaravelLineNotify\LaravelLineNotify
+ * @method static getAccessToken($code)
  * @method static sendNotify(LaravelLineMessage $message, string $token)
  */
 class LaravelLineNotifyFacade extends Facade
